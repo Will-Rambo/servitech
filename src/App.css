@@ -1,4 +1,4 @@
-@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 * {
   margin: 0;
   padding: 0;
@@ -31,13 +31,13 @@ header {
 .logo {
   height: 80px;
   width: auto;
-  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 header h1 {
   font-size: 2.5rem;
   color: #8e1740;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 nav a {
@@ -50,14 +50,14 @@ nav a {
 
 nav a:hover {
   text-decoration: none;
-  color:#8e1740;
+  color: #8e1740;
 }
 
 /* CONTEÚDO PRINCIPAL */
 main {
   flex: 1; /* ocupa todo espaço disponível */
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -96,19 +96,29 @@ button:hover {
 /* FOOTER */
 footer {
   display: flex;
-  justify-content: space-between; /* espaça o conteúdo: p na esquerda, icons na direita */
   align-items: center;
+  justify-content: center; /* centraliza os itens do footer */
   padding: 20px 40px;
-  background-color: #222; /* exemplo de cor de fundo */
+  background-color: #222;
   color: white;
+  position: relative;
 }
 
+/* Texto centralizado */
 footer p {
-  margin: 0; /* remove margem padrão do parágrafo */
+  margin: 0;
+  text-align: center;
+  flex: 1; /* ocupa todo o espaço disponível, empurrando os ícones para a direita */
+}
+
+/* Ícones à direita */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-left: auto; /* empurra a div para o canto direito */
 }
 
 .social-icons a {
-  margin-left: 15px; /* espaço entre os ícones */
   color: white;
   text-decoration: none;
   font-size: 1.5rem;

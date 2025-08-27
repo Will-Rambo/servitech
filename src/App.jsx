@@ -7,9 +7,9 @@ function App() {
     <div>
       {/* Header */}
       <header>
-        <img src="./images/logo-bordo-500-sf.png" alt="ServTech Instalações" class="logo"></img>
+        <img src="/images/logo-bordo-500-sf.png" alt="ServTech Instalações" class="logo"></img>
         {/*<h1>SERVTECH</h1>*/}
-        <img src="./images/servtech-2.png" alt="ServTech Instalações" class="logo"></img>
+        <img src="/images/servtech-2.png" alt="ServTech Instalações" class="logo"></img>
 
         <nav>
           <a href="#">Início</a>

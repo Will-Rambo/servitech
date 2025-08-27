@@ -3,12 +3,12 @@ import "./CarouselStyles.css"; // CSS separado para o componente
 
 // Lista de imagens e textos
 const images = [
-  { src: "/images/ar-condicionado-1.jpg", text: "Instalação de Ar-Condicionado Split" },
-  { src: "/images/cameras.jpg", text: "Câmeras de Segurança de alta resolução" },
+  { src: "/images/ar-condicionado.webp", text: "Instalação de Ar-Condicionado Split" },
+  { src: "/images/cameras.webp", text: "Câmeras de Segurança de alta resolução" },
   { src: "/images/portao-eletronico.jpg", text: "Automação de Portões Eletrônicos" },
   { src: "/images/kit-cerca.jpg", text: "Instalação de cerca elétrica" },
-  { src: "/images/fechadura.jpg", text: "Fechadura eletrônica" },
-  { src: "/teste2.jpg", text: "teste resolução de imagem" }
+  { src: "/images/fechadura.webp", text: "Fechadura eletrônica" },
+  { src: "/images/serviço.webp", text: "Serviço de manutenção" }
 ];
 
 function Carousel() {

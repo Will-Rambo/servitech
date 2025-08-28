@@ -15,7 +15,10 @@ function App() {
       {/* Header */}
       <header>
         <img src="/servitech/images/logo-bordo-500-sf.png" alt="ServTech Instalações" className="logo" />
-        {/*<h1>SERVTECH</h1>*/}
+
+        <img src="/images/logo-bordo-500-sf.png" alt="ServTech Instalações" className="logo" />
+
+    
         <img src="/servitech/images/servtech-2.png" alt="ServTech Instalações" className="logo" />
 
                 {/* Botão do menu hamburguer */}

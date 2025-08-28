@@ -1,8 +1,15 @@
+import React, { useState } from 'react';
 import './App.css';
 import Carousel from "./components/Carousel";
 
 
 function App() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div>
       {/* Header */}
@@ -11,7 +18,12 @@ function App() {
         {/*<h1>SERVTECH</h1>*/}
         <img src="/servitech/images/servtech-2.png" alt="ServTech Instalações" className="logo" />
 
-        <nav>
+                {/* Botão do menu hamburguer */}
+        <button className="menu-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+
+        <nav className={menuOpen ? "nav-links active" : "nav-links"}>
           <a href="#">Início</a>
           <a href="#">Serviços</a>
           <a href="#">Sobre</a>

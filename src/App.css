@@ -81,7 +81,7 @@ button {
   padding: 15px 40px;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: #8530a5;
+  background-color: #7e2227;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 8px;
@@ -90,7 +90,7 @@ button {
 }
 
 button:hover {
-  background-color: #8530a5;
+  background-color: #7e2227;
 }
 
 /* FOOTER */
@@ -169,4 +169,83 @@ footer p {
 
 .hero button:hover {
   background-color: #3c3d3f;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #848492;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* permite que os itens quebrem linha em telas pequenas */
+}
+
+/* Ajuste das imagens e nav em telas pequenas */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .logo {
+    height: 60px; /* reduz o tamanho do logo no celular */
+  }
+}
+
+/* Botão do menu hamburguer */
+.menu-toggle {
+  display: none; /* escondido por padrão */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Links do nav */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* mostra o botão hambúrguer */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%; /* abaixo do header */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #848492;
+    display: none; /* escondido por padrão */
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* aparece quando clicado */
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }

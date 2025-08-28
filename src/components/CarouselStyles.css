@@ -14,26 +14,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-}
-
-.arrow.left {
-  left: -50px;
-}
-
-.arrow.right {
-  right: -50px;
-}
 
 .indicators {
   margin-top: 15px;
@@ -120,4 +100,34 @@
   .carousel img {
     height: 250px;
   }
+}
+
+/* Botões do carrossel */
+.carousel-container .arrow {
+  background: none; /* remove o fundo */
+  border: none; /* remove borda */
+  font-size: 2rem; /* tamanho da seta */
+  color: #333; /* cor da seta */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0; /* remove padding para tirar o círculo */
+}
+
+.carousel-container .arrow.left {
+  left: 10px;
+}
+
+.carousel-container .arrow.right {
+  right: 10px;
+}
+
+.carousel-container .arrow:hover {
+  color: #8a0022; /* efeito de hover */
+}
+
+.carousel-container .arrow:focus {
+  outline: none;
 }

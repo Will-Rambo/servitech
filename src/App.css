@@ -1,4 +1,6 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,47 +12,159 @@ body,
 #root {
   height: 100%;
   width: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
   color: #333;
   display: flex;
   flex-direction: column;
+  font-size: 10px;
+}
+
+.sub-header {
+  width: 100vw;
+  background: #8e1740;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: 1;
+  padding: 0px 32px 0px 32px;
+  gap: 300px; /* Espaçamento entre os botões */
+}
+
+.sub-header-col {
+  margin: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 2px 0;
+  font: inherit;
+  transition: background 0.2s;
+  align-items: center;
+}
+
+.sub-header-col:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.sub-header-col i {
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* texto corrido mais leve */
 }
 
 /* HEADER */
 header {
   width: 100%; /* agora vai de ponta a ponta */
+  height: 100px;
+  position: relative;
   background-color: #848492;
   color: white;
-  padding: 30px 60px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap; /* ✅ impede quebra */
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed-button img {
+  width: 70px; /* ajuste o tamanho conforme necessário */
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.fixed-button:hover img {
+  transform: scale(1.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* alinha na vertical */
+  gap: 0px; /* espaço entre o logo e o nome */
 }
 
 .logo {
-  height: 80px;
+  height: 70px;
   width: auto;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #8e1740;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+.logo-servtech {
+  height: 250px;
+  width: auto;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+  
 nav a {
   color: white;
-  margin-left: 40px;
+  margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 15px;
 }
 
 nav a:hover {
   text-decoration: none;
   color: #8e1740;
+}
+
+/* Links do nav */
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 /* CONTEÚDO PRINCIPAL */
@@ -65,7 +179,7 @@ main {
 }
 
 main h2 {
-  font-size: 3rem;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
@@ -96,43 +210,72 @@ button:hover {
 /* FOOTER */
 footer {
   display: flex;
-  align-items: center;
-  justify-content: center; /* centraliza os itens do footer */
-  padding: 20px 40px;
-  background-color: #222;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 40px;
+  background-color: #48484e;
   color: white;
   position: relative;
 }
 
-/* Texto centralizado */
+.footer-col {
+  flex: 1;
+  padding: 0 30px;
+  min-width: 200px;
+}
+
+.footer-col:nth-child(2) {
+  flex: 2; /* A segunda coluna ficará duas vezes maior */
+}
+
+.footer-col a {
+  color: #ffffff;
+  display: block;
+  text-align: center;
+}
+
+.footer-col a:hover {
+  color: #4a89ff; /* cor ao passar o mouse, ajuste se quiser */
+}
+
+.footer-col p {
+  margin: 4px 0;
+}
+
 footer p {
   margin: 0;
   text-align: center;
-  flex: 1; /* ocupa todo o espaço disponível, empurrando os ícones para a direita */
 }
 
 /* Ícones à direita */
 .social-icons {
   display: flex;
   gap: 15px;
-  margin-left: auto; /* empurra a div para o canto direito */
+  justify-content: center;
 }
 
 .social-icons a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
 }
 
 .social-icons a:hover {
-  color: #8530a5; /* muda a cor ao passar o mouse */
+  color: #3400f0; /* muda a cor ao passar o mouse */
+}
+
+.copyright-desktop {
+  display: block;
+}
+.copyright-mobile {
+  display: none;
 }
 
 /* Hero Section */
 .hero {
   width: 100%;
   height: 80vh; /* ocupa 80% da altura da tela */
-  background-color: #e5f1ff; /* cor temporária, vai trocar pela imagem */
+  background-color: #fff; /* cor temporária, vai trocar pela imagem */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,7 +302,7 @@ footer p {
   padding: 15px 50px;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: #8530a5;
+  background-color: #007e00;
   color: white;
   border: none;
   border-radius: 8px;
@@ -168,65 +311,97 @@ footer p {
 }
 
 .hero button:hover {
-  background-color: #3c3d3f;
+  background-color: #00d800;
 }
 
-/* HEADER */
-header {
-  width: 100%;
-  background-color: #848492;
-  color: white;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* permite que os itens quebrem linha em telas pequenas */
-}
-
-/* Ajuste das imagens e nav em telas pequenas */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 10px;
   }
 
-  nav {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  nav a {
-    margin: 5px 0;
-  }
-
-  .logo {
-    height: 60px; /* reduz o tamanho do logo no celular */
-  }
-}
-
-/* Botão do menu hamburguer */
-.menu-toggle {
-  display: none; /* escondido por padrão */
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-}
-
-/* Links do nav */
-.nav-links {
-  display: flex;
-  gap: 40px;
-}
-
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* mostra o botão hambúrguer */
+  .sub-header {
+    gap: 24px;
+    padding: 8px 8px;
+    font-size: 1rem;
   }
+  .logo-servtech {
+    height: 80px;
+  }
+  .logo {
+    height: 40px;
+  }
+  .footer-col {
+    padding: 0 10px;
+    min-width: unset;
+  }
+
+  .footer-col,
+  .footer-col * {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .footer-col a,
+  .footer-col p {
+    margin: 4px 0 !important; /* margens pequenas e iguais */
+  }
+  .footer-col p:last-child {
+    margin-top: 4px !important;
+  }
+
+  .social-icons {
+    justify-content: center !important;
+    margin-left: 0 !important;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .footer-col .copyright-mobile {
+    margin-top: 16px;
+    font-size: 0.95em;
+    opacity: 0.8;
+  }
+
+  .copyright-desktop {
+    display: none;
+  }
+  .copyright-mobile {
+    display: block;
+    margin-top: 16px;
+    font-size: 0.95em;
+    opacity: 0.8;
+    text-align: center;
+  }
+  .fixed-button img {
+    width: 48px;
+  }
+  .hero {
+    height: auto;
+    padding: 30px 0;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  main {
+    padding: 20px 5px;
+  }
+}
 
   .nav-links {
     position: absolute;
@@ -237,14 +412,15 @@ header {
     background-color: #848492;
     display: none; /* escondido por padrão */
     padding: 20px 0;
+    gap: 10px; /* espaçamento vertical entre links */
   }
 
   .nav-links.active {
-    display: flex; /* aparece quando clicado */
+    display: flex; /* mostra quando clicado */
   }
 
   .nav-links a {
-    margin: 10px 0;
+    margin: 0; /* remove margin-left */
     font-size: 1.5rem;
     text-align: center;
   }

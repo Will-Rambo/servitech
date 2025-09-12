@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+/* debug.css */
+
+  /*outline: 1px solid rgba(255, 0, 0, 0.4); /* borda leve */
+
+
 html,
 body,
 #root {
@@ -27,7 +32,7 @@ body,
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   font-weight: 500;
   position: relative;
   left: 50%;
@@ -49,6 +54,7 @@ body,
   font: inherit;
   transition: background 0.2s;
   align-items: center;
+  font-size: 1.8rem;
 }
 
 .sub-header-col:hover {
@@ -56,7 +62,7 @@ body,
 }
 
 .sub-header-col i {
-  font-size: 1.5em;
+  font-size: 1.8rem;
   vertical-align: middle;
   margin-right: 10px; /* Espaço entre o ícone e o texto */
 }
@@ -71,13 +77,14 @@ h1, h2, h3, h4 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.9rem;
   text-align: center;
 }
 
 p {
   font-family: 'Poppins', sans-serif;
   font-weight: 400; /* texto corrido mais leve */
+  font-size: 1.8rem;
 }
 
 /* HEADER */
@@ -131,22 +138,24 @@ header {
 }
 
 .logo-servtech {
-  height: 250px;
+  height: 40px;
   width: auto;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  margin-left: 30px;
 }
 
 nav {
   display: flex;
   align-items: center;
 }
+
   
 nav a {
   color: white;
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1.8rem;
 }
 
 nav a:hover {
@@ -161,10 +170,11 @@ nav a:hover {
 }
 
 .nav-links a {
+  cursor: pointer;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1.8rem;
 }
 
 /* CONTEÚDO PRINCIPAL */
@@ -179,12 +189,12 @@ main {
 }
 
 main h2 {
-  font-size: 1rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
 }
 
 main p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   max-width: 1000px;
   line-height: 1.6;
 }
@@ -216,8 +226,10 @@ footer {
   background-color: #48484e;
   color: white;
   position: relative;
+  flex-wrap: wrap; /* permite que as colunas quebrem em telas menores */
 }
 
+/* Colunas do Footer */
 .footer-col {
   flex: 1;
   padding: 0 30px;
@@ -225,13 +237,14 @@ footer {
 }
 
 .footer-col:nth-child(2) {
-  flex: 2; /* A segunda coluna ficará duas vezes maior */
+  flex: 1; /* A segunda coluna ficará duas vezes maior */
 }
 
 .footer-col a {
   color: #ffffff;
   display: block;
   text-align: center;
+  font-size: 1.6rem;
 }
 
 .footer-col a:hover {
@@ -240,6 +253,7 @@ footer {
 
 .footer-col p {
   margin: 4px 0;
+  font-size: 1.6rem;
 }
 
 footer p {
@@ -252,6 +266,7 @@ footer p {
   display: flex;
   gap: 15px;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .social-icons a {
@@ -261,12 +276,18 @@ footer p {
 }
 
 .social-icons a:hover {
-  color: #3400f0; /* muda a cor ao passar o mouse */
+  color: #4a89ff; /* muda a cor ao passar o mouse */
 }
 
-.copyright-desktop {
-  display: block;
+
+footer p.copyright-desktop {
+  flex-basis: 100%;   /* força quebrar linha no flex */
+  text-align: center;
+  margin-top: 20px;   /* espaço em relação às colunas */
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
+
 .copyright-mobile {
   display: none;
 }
@@ -289,18 +310,18 @@ footer p {
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 30px;
 }
 
 .hero button {
   padding: 15px 50px;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   background-color: #007e00;
   color: white;
@@ -317,10 +338,12 @@ footer p {
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
   header {
+    min-height: 50px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 0 20px;
+    height: auto;
   }
 
 @media (max-width: 768px) {
@@ -330,11 +353,25 @@ footer p {
     font-size: 1rem;
   }
   .logo-servtech {
-    height: 80px;
+    height: 150px;
   }
   .logo {
-    height: 40px;
+    height: 60px;
   }
+
+  .logo-container {
+    min-height: 30px; /* ou ajuste conforme o tamanho da logo */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .page-container {
+  background-color: #ff0000; /* cinza claro */
+  min-height: 100vh; /* ocupa a altura total da tela */
+  padding: 2rem;
+}
+
   .footer-col {
     padding: 0 10px;
     min-width: unset;
@@ -393,7 +430,7 @@ footer p {
     padding: 30px 0;
   }
   .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .hero p {
     font-size: 1rem;

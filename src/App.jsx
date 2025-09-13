@@ -1,7 +1,7 @@
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 // futuramente você pode importar outras páginas:
-import Segurança from "./pages/segurança";
+import Segurança from "./pages/Segurança";
 import Conforto from "./pages/Conforto";
 
 function App() {

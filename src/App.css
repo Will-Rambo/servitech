@@ -131,6 +131,12 @@ header {
   gap: 0px; /* espaço entre o logo e o nome */
 }
 
+.page-container {
+  background-color: #58595f; /* cinza claro */
+  min-height: 100vh; /* ocupa a altura total da tela */
+  padding: 2rem;
+}
+
 .logo {
   height: 70px;
   width: auto;

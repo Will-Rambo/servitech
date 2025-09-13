@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 function Seguranca() {
   return (
-    <div style={{ padding: "2rem",backgroundColor: "#848492", color: "#fff", minHeight: "100vh"}}>
+    <div className="page-container">
       <h1>Soluções em Segurança Eletrônica</h1>
       <p>
         Trabalhamos com instalação de <strong>câmeras de segurança de alta resolução</strong>, 

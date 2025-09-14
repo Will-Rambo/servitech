@@ -358,9 +358,13 @@ footer p.copyright-desktop {
     padding: 8px 8px;
     font-size: 1rem;
   }
+
   .logo-servtech {
-    height: 150px;
+    width: auto;
+    max-height: 30px;
+    margin-left: 10px; /* aproxima do ícone */
   }
+
   .logo {
     height: 60px;
   }

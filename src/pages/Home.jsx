@@ -58,10 +58,9 @@ export default function Home() {
         <div className="hero-content">
           <h2>Conforto e Segurança para sua Casa e Empresa</h2>
           <p>Venda e instalação de ar-condicionado split e sistemas de segurança eletrônica.</p>
-          <button onClick={() => window.location.href='tel:(43) 99931-6610'}>Solicitar Orçamento</button>
+          <button onClick={() => window.location.href="https://wa.me/+5543999316610"}>Solicitar Orçamento</button>
         </div>
       </section>
-
 
       {/* Footer */}
       <footer id="contato">

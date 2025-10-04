@@ -1,5 +1,6 @@
 import "../App.css";
 import Carousel from "../components/Carousel";
+import LogoCarousel from "../components/LogoCarousel";
 import { Link as ScrollLink } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 
@@ -60,7 +61,9 @@ export default function Home() {
           <p>Venda e instalação de ar-condicionado split e sistemas de segurança eletrônica.</p>
           <button onClick={() => window.location.href="https://wa.me/+5543999316610"}>Solicitar Orçamento</button>
         </div>
+        <div></div>
       </section>
+      <LogoCarousel />  {/* Carrossel de logos */}
 
       {/* Footer */}
       <footer id="contato">
@@ -89,7 +92,5 @@ export default function Home() {
     </div>
   );
 }  
-
-
 
 

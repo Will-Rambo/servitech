@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 function Conforto() {
   return (
-    <div style={{ backgroundImage: "url('/servitech/images/ar-condicionado.webp')", width: "100%", minHeight: "100vh", padding: "1rem" }}>
+    <div style={{ backgroundImage: "url('/servitech/images/ar-condicionado.webp')", backgroundAttachment: "fixed", 
+      backgroundSize: "cover", width: "100%", minHeight: "100vh", padding: "1rem" }}>
       <header style={{ margin: "0", width: "100%", padding: "3rem"}}>
           <div className="logo-container">
             <img src="/servitech/images/logo-bordo-500-sf.png" alt="ServTech Instalações" className="logo" />
@@ -19,8 +20,16 @@ function Conforto() {
           <strong>fechaduras eletrônicas</strong> e soluções de automação 
           para trazer praticidade e conforto ao seu dia a dia.
         </p>
-          <img src="/servitech/images/arcondicionado-Elgin.jpg" alt="Ar-condicionado Split" style={{ maxWidth: "100%", borderRadius: "10px" }} />
-          <img src="/servitech/images/Fechadura-Eletronica.webp" alt="Fechadura eletrônica" style={{ maxWidth: "100%", borderRadius: "10px", marginTop: "1rem" }} />
+        <div>
+          <div style={{ backgroundColor:"#ffff",backgroundSize: "cover", borderRadius: "10px" }}>
+            <img src="/servitech/images/arcondicionado-Elgin.jpg" alt="Ar-condicionado Split" 
+            style={{ maxWidth: "100%", borderRadius: "10px" }} />
+          </div>
+          <div>
+            <img src="/servitech/images/Fechadura-Eletronica.webp" alt="Fechadura eletrônica" 
+            style={{ maxWidth: "100%", borderRadius: "10px", marginTop: "1rem" }} />
+          </div>
+        </div>
       </main>
       <footer>
         <div>

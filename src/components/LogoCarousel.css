@@ -1,0 +1,52 @@
+/* ✅ Container do carrossel */
+.logo-carousel {
+  width: 100%;
+  overflow: hidden;
+  background: #f9f9f9;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Track com largura automática */
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content; /* largura baseada no conteúdo real */
+  animation: pingpong 12s ease-in-out infinite alternate;
+}
+
+/* ✅ Logos */
+.logo-item {
+  flex: 0 0 auto;
+  display: block;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  border: none;
+}
+
+.logo-item:hover {
+  filter: grayscale(0%);
+}
+
+/* ✅ Animação sem deixar espaço vazio */
+@keyframes pingpong {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-40%); } /* ajustado para o tamanho dos itens */
+}
+
+/* ✅ Responsivo */
+@media (max-width: 1024px) {
+  .logo-item { width: 150px; }
+  .logo-track { gap: 15px; }
+}
+
+@media (max-width: 600px) {
+  .logo-item { width: 100px; }
+  .logo-track { gap: 10px; }
+}

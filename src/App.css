@@ -7,9 +7,11 @@
   box-sizing: border-box;
 }
 
-/* debug.css */
-
-  /*outline: 1px solid rgba(255, 0, 0, 0.4); /* borda leve */
+/* debug.css 
+*{
+outline: 
+  1px solid #f9f9f9;
+} /* borda leve */
 
 
 html,
@@ -26,7 +28,8 @@ body,
 }
 
 .sub-header {
-  width: 100vw;
+  width: 100%; /* cobre todo o container sem causar overflow */
+  box-sizing: border-box; /* padding não aumenta a largura */
   background: #8e1740;
   color: #fff;
   display: flex;
@@ -34,13 +37,9 @@ body,
   justify-content: center;
   font-size: 1.8rem;
   font-weight: 500;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  position: relative; /* mantém no fluxo */
   z-index: 1;
-  padding: 0px 32px 0px 32px;
+  padding: 0px 32px; /* padding interno normal */
   gap: 300px; /* Espaçamento entre os botões */
 }
 
